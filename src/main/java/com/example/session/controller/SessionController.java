@@ -26,18 +26,18 @@ public class SessionController {
             int guessCount = (Integer)session.getAttribute("guessCount");
 
             if (guessedNumber == randomNumber) {
-                message = randomNumber + "은 정답입니다!" + ++guessCount + "번째에 맞췄습니다.";
+                message = guessedNumber + "은 정답입니다! " + ++guessCount + "번 만에 맞췄습니다.";
 
                 session.removeAttribute("randomNumber");
                 session.removeAttribute("guessCount");
             }
             else if (guessedNumber < randomNumber) {
-                message = randomNumber + "은 정답보다 작습니다.";
+                message = guessedNumber + "은 정답보다 작습니다.";
 
                 session.setAttribute("guessCount", ++guessCount);
             }
             else {
-                message = randomNumber + "은 정답보다 큽니다.";
+                message = guessedNumber + "은 정답보다 큽니다.";
 
                 session.setAttribute("guessCount", ++guessCount);
             }
