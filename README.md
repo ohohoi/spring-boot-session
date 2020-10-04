@@ -1,4 +1,4 @@
-# 📗 Spring에서 Session 사용해보기
+# 📗 Spring Boot - Session 사용해보기
 
 ## 서버에 저장된 Session값 맞추기
 1. 클라이언트가 서버에 처음 요청을 하면 서버는 Session id를 생성하고 Key와 Value를 이용한 저장소인 HttpSession을 생성한다.
